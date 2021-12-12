@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,14 @@
 		A70CBCDF27596EDA00AA5FB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBCB427596ED800AA5FB9 /* ContentView.swift */; };
 		A70CBCE027596EDA00AA5FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70CBCB527596EDA00AA5FB9 /* Assets.xcassets */; };
 		A70CBCE127596EDA00AA5FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70CBCB527596EDA00AA5FB9 /* Assets.xcassets */; };
+		A70CBD35275AC56C00AA5FB9 /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = A70CBD34275AC56C00AA5FB9 /* SwiftPieChart */; };
+		A70CBD39275BAE4700AA5FB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBD38275BAE4700AA5FB9 /* HomeView.swift */; };
+		A70CBD3B275BB0C300AA5FB9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */; };
+		A70CBD3E275BD31900AA5FB9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A70CBD3D275BD31900AA5FB9 /* Realm */; };
+		A70CBD40275BD31900AA5FB9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A70CBD3F275BD31900AA5FB9 /* RealmSwift */; };
+		A7C125E1276544DD007904F4 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E0276544DD007904F4 /* Expenses.swift */; };
+		A7C125E42765469C007904F4 /* ExpensesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E32765469C007904F4 /* ExpensesManager.swift */; };
+		A7C125E52765486B007904F4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,10 @@
 		A70CBCD527596EDA00AA5FB9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70CBCD927596EDA00AA5FB9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A70CBCDB27596EDA00AA5FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70CBD38275BAE4700AA5FB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		A7C125E0276544DD007904F4 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		A7C125E32765469C007904F4 /* ExpensesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70CBD40275BD31900AA5FB9 /* RealmSwift in Frameworks */,
+				A70CBD3E275BD31900AA5FB9 /* Realm in Frameworks */,
+				A70CBD35275AC56C00AA5FB9 /* SwiftPieChart in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +113,10 @@
 		A70CBCB227596ED800AA5FB9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A7C125DF27654482007904F4 /* ViewModel */,
+				A7C125DE27654479007904F4 /* Model */,
+				A7C125DD2765446D007904F4 /* Views */,
 				A70CBCB327596ED800AA5FB9 /* coinflowApp.swift */,
-				A70CBCB427596ED800AA5FB9 /* ContentView.swift */,
 				A70CBCB527596EDA00AA5FB9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -151,6 +168,32 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		A7C125DD2765446D007904F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A70CBD38275BAE4700AA5FB9 /* HomeView.swift */,
+				A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */,
+				A70CBCB427596ED800AA5FB9 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7C125DE27654479007904F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7C125E0276544DD007904F4 /* Expenses.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A7C125DF27654482007904F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A7C125E32765469C007904F4 /* ExpensesManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +210,11 @@
 			dependencies = (
 			);
 			name = "coinflow (iOS)";
+			packageProductDependencies = (
+				A70CBD34275AC56C00AA5FB9 /* SwiftPieChart */,
+				A70CBD3D275BD31900AA5FB9 /* Realm */,
+				A70CBD3F275BD31900AA5FB9 /* RealmSwift */,
+			);
 			productName = "coinflow (iOS)";
 			productReference = A70CBCBA27596EDA00AA5FB9 /* coinflow.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +306,10 @@
 				Base,
 			);
 			mainGroup = A70CBCAD27596ED800AA5FB9;
+			packageReferences = (
+				A70CBD33275AC56B00AA5FB9 /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
+				A70CBD3C275BD31900AA5FB9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = A70CBCBB27596EDA00AA5FB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,6 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C125E1276544DD007904F4 /* Expenses.swift in Sources */,
+				A70CBD39275BAE4700AA5FB9 /* HomeView.swift in Sources */,
+				A7C125E42765469C007904F4 /* ExpensesManager.swift in Sources */,
+				A70CBD3B275BB0C300AA5FB9 /* HistoryView.swift in Sources */,
 				A70CBCDE27596EDA00AA5FB9 /* ContentView.swift in Sources */,
 				A70CBCDC27596EDA00AA5FB9 /* coinflowApp.swift in Sources */,
 			);
@@ -318,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70CBCDF27596EDA00AA5FB9 /* ContentView.swift in Sources */,
+				A7C125E52765486B007904F4 /* HistoryView.swift in Sources */,
 				A70CBCDD27596EDA00AA5FB9 /* coinflowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +528,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZWFS959S8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -492,6 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZWFS959S8X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -686,6 +745,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A70CBD33275AC56B00AA5FB9 /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.61;
+			};
+		};
+		A70CBD3C275BD31900AA5FB9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A70CBD34275AC56C00AA5FB9 /* SwiftPieChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A70CBD33275AC56B00AA5FB9 /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
+			productName = SwiftPieChart;
+		};
+		A70CBD3D275BD31900AA5FB9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A70CBD3C275BD31900AA5FB9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		A70CBD3F275BD31900AA5FB9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A70CBD3C275BD31900AA5FB9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A70CBCAE27596ED800AA5FB9 /* Project object */;
 }
