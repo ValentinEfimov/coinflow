@@ -16,7 +16,7 @@ struct ContentView: View {
     @State var shouldShowModals = false
     @State var showCategorySheet = false
     @State  var description = ""
-    @State  var type = "Еда"
+    @State  var type = ""
     @State  var amount = ""
     
     let types = ["Продукты", "Транспорт", "Еда", "Развлечения", "Прочее"]
@@ -41,7 +41,7 @@ struct ContentView: View {
                         })
                         Button(action:
                                 {
-                                    expenses.addExpenses(types: types, amount: amount, description: description)
+                                    expenses.addExpenses(type: type, amount: amount, description: description)
                                     shouldShowModals.toggle()
                                     self.description = ""
                                     self.amount = ""
