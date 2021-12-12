@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-
+import Combine
 
 
 struct HistoryView: View {
-    
+  
     @ObservedObject var expenses: Expenses
     var body: some View {
-        
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
@@ -25,7 +24,9 @@ struct HistoryView: View {
                         Spacer()
                         Text("$\(item.amount)").padding()
                     }
-                }
+                }.onDelete(perform: { indexSet in
+                    expenses.removeExpenses(at: indexSet)
+               })
             }
             .navigationBarTitle("History", displayMode: .inline)
         }

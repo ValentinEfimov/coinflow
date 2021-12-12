@@ -84,24 +84,7 @@ struct ContentView: View {
                 case 0:
                     HomeView()
                 case 1:
-                    NavigationView {
-                        List {
-                            ForEach(expenses.items) { item in
-                                HStack{
-                                    VStack(alignment: .leading){
-                                        Text(item.type).font(.headline)
-                                        Text(item.name)
-                                    }
-                                    Spacer()
-                                    Text("$\(item.amount)").padding()
-                                }
-                            }
-                            .onDelete(perform: { indexSet in
-                                expenses.removeExpenses(at: indexSet)
-                            })
-                        }
-                        .navigationBarTitle("History", displayMode: .inline)
-                    }
+                    HistoryView(expenses: self.expenses)
                 default:
                     NavigationView {
                         Text("Remainnig tabs")
