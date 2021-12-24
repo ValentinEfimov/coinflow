@@ -4,7 +4,7 @@
 //
 //  Created by Valentin on 4.12.21.
 //
-
+import Foundation
 import SwiftUI
 import SwiftPieChart
 

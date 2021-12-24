@@ -8,9 +8,9 @@
 import SwiftUI
 import SwiftPieChart
 import RealmSwift
-import Foundation
 
-struct ContentView: View {
+
+struct ContentView: View{
     
     @State var selectedIndex = 0
     @State var shouldShowModals = false
@@ -22,7 +22,9 @@ struct ContentView: View {
     let types = ["Продукты", "Транспорт", "Еда", "Развлечения", "Прочее"]
     
     @ObservedObject var expenses = Expenses()
-    
+    @StateObject var modelData = DBViewModel()
+    @StateObject var testDB = DBViewModel()
+    @Environment(\.presentationMode) var presetation
     let tabBarImageNames = ["house","list.dash","plus.app.fill","gear","person"]
     
     var body: some View {
@@ -42,6 +44,7 @@ struct ContentView: View {
                         Button(action:
                                 {
                                     expenses.addExpenses(type: type, amount: amount, description: description)
+                                    modelData.addData(type: type, amount: amount, description: description)
                                     shouldShowModals.toggle()
                                     self.description = ""
                                     self.amount = ""
@@ -63,6 +66,7 @@ struct ContentView: View {
                                 Text("\(self.type)")
                             }
                         }).sheet(isPresented: $showCategorySheet, content: {
+                            
                             HStack{
                                 Picker("Тип", selection: $type) {
                                     ForEach(self.types, id: \.self) {
@@ -84,7 +88,7 @@ struct ContentView: View {
                 case 0:
                     HomeView()
                 case 1:
-                    HistoryView(expenses: self.expenses)
+                    HistoryView(expenses: self.modelData, expensesLocal: self.expenses)
                 default:
                     NavigationView {
                         Text("Remainnig tabs")

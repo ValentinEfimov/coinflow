@@ -7,21 +7,23 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
 class Expenses: ObservableObject {
+    
     @Published var items = [expensesItem]()
     
     func addExpenses(type: String, amount: String, description:  String ) {
         if let actualAmount = Int(amount) {
-            let items1 = expensesItem(name: description, type: String(type), amount: actualAmount)
-                items.append(items1)
+            let _items = expensesItem(name: description, type: String(type), amount: actualAmount)
+                items.append(_items)
             }
             print("saving")
     }
     
-    func removeExpenses(at indexSet: IndexSet){
-        for index in indexSet {
-            items.remove(at: index)
-        }
+    func removeExpenses(as offsets: IndexSet) {
+        items.remove(atOffsets: offsets)
     }
-}
+        
+    }
+

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
 struct expensesItem : Identifiable {
     var id = UUID()
@@ -14,3 +15,5 @@ struct expensesItem : Identifiable {
     var type : String
     var amount : Int
 }
+
+

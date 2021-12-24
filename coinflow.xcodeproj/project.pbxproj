@@ -23,6 +23,9 @@
 		A7C125E1276544DD007904F4 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E0276544DD007904F4 /* Expenses.swift */; };
 		A7C125E42765469C007904F4 /* ExpensesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E32765469C007904F4 /* ExpensesManager.swift */; };
 		A7C125E52765486B007904F4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */; };
+		A7C125E727668C57007904F4 /* DBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E627668C57007904F4 /* DBItem.swift */; };
+		A7C125E927668D5B007904F4 /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125E827668D5B007904F4 /* DBViewModel.swift */; };
+		A7C125EB2769DB3D007904F4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C125EA2769DB3D007904F4 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		A70CBD3A275BB0C300AA5FB9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		A7C125E0276544DD007904F4 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		A7C125E32765469C007904F4 /* ExpensesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesManager.swift; sourceTree = "<group>"; };
+		A7C125E627668C57007904F4 /* DBItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBItem.swift; sourceTree = "<group>"; };
+		A7C125E827668D5B007904F4 /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
+		A7C125EA2769DB3D007904F4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		A70CBCAD27596ED800AA5FB9 = {
 			isa = PBXGroup;
 			children = (
+				A7C125EA2769DB3D007904F4 /* Test.swift */,
 				A70CBCB227596ED800AA5FB9 /* Shared */,
 				A70CBCBC27596EDA00AA5FB9 /* iOS */,
 				A70CBCC327596EDA00AA5FB9 /* macOS */,
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C125E0276544DD007904F4 /* Expenses.swift */,
+				A7C125E627668C57007904F4 /* DBItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C125E32765469C007904F4 /* ExpensesManager.swift */,
+				A7C125E827668D5B007904F4 /* DBViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -361,10 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7C125E1276544DD007904F4 /* Expenses.swift in Sources */,
+				A7C125E727668C57007904F4 /* DBItem.swift in Sources */,
+				A7C125EB2769DB3D007904F4 /* Test.swift in Sources */,
 				A70CBD39275BAE4700AA5FB9 /* HomeView.swift in Sources */,
 				A7C125E42765469C007904F4 /* ExpensesManager.swift in Sources */,
 				A70CBD3B275BB0C300AA5FB9 /* HistoryView.swift in Sources */,
 				A70CBCDE27596EDA00AA5FB9 /* ContentView.swift in Sources */,
+				A7C125E927668D5B007904F4 /* DBViewModel.swift in Sources */,
 				A70CBCDC27596EDA00AA5FB9 /* coinflowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
