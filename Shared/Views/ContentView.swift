@@ -86,7 +86,7 @@ struct ContentView: View{
                 })
                 switch selectedIndex {
                 case 0:
-                    HomeView()
+                    HomeView(amount: self.expenses)
                 case 1:
                     HistoryView(expenses: self.modelData, expensesLocal: self.expenses)
                 default:
